@@ -9,17 +9,6 @@
 # 爱思助手 //list-app-m.i4.cn
 ^https:\/\/list-app-m\.i4\.cn\/(?:adclickcb|getHotSearchList|getopfstadinfo)\.xhtml reject
 
-# 阿里云盘 //*api.alipan.com, member.alipan.com
-^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders reject-dict
-^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_luckyBottle reject-dict
-
-# 百度云 //pan.baidu.com
-^https:\/\/pan\.baidu\.com\/(?:act\/|aipic\/|aisearch\/|api\/getsyscfg\?|rest\/) reject-dict
-
-# 豆瓣 //api.douban.com, img3.doubanio.com, qnmob3.doubanio.com
-^https:\/\/api\.douban\.com\/v2\/app_ads\/splash\w+ reject-dict
-^https:\/\/(?:img|qnmob)3\.doubanio\.com\/view\/dale-online\/dale_ad\/public\/\w+ reject-dict
-
 # 建设银行
 ^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/(?:nf\/newfin\/activity|po\/poortheme\/activity)\/\w+\.png reject
 
@@ -112,9 +101,6 @@
 ^https?:\/\/ios\.wps\.cn\/ad-statistics-service - reject
 ^https?:\/\/mobile-pic\.cache\.iciba\.com\/feeds_ad\/ - reject-200
 
-# > 米家
-^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|openingBanner) - reject-dict
-
 # > 小爱音箱
 ^https:\/\/hd\.mina\.mi\.com\/app_ad\/tab_alert\?requestId=app_ios - reject-dict
 ^https:\/\/hd\.mina\.mi\.com\/splashscreen\/alert\?requestId=app_ios - reject-dict
@@ -162,19 +148,15 @@
 
 
 [Script]
-# 开屏广告
+# 美团开屏广告
 http-response ^https?:\/\/img\.meituan\.net\/dpmobile\/ script-path=https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/dianping.js, requires-body=true, timeout=60, tag=dianping
-
-# > 夸克
-http-response ^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/quark.js, requires-body=true, timeout=60, tag=quark
 
 # > TestFlight
 http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js, requires-body=true, timeout=60, tag=TF_Download
 
 #米家优化 author = linuszlx update = 2023-11-29
 http-response ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/exploreTab script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Mi/MiTab.js, requires-body=true, timeout=60, tag=MiTab
-
 http-response ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/myTab script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Mi/MiAD.js, requires-body=true, timeout=60, tag=MiAD
 
 [MITM]
-hostname = list-app-m.i4.cn, pan.baidu.com,api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, p0.pipi.cn, flowplus.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com,home.mi.com, wallet.95516.com, hd.mina.mi.com, img.meituan.net, app.dewu.com, cdn.poizon.com, static.95508.com, gab.122.gov.cn, open-cms-api.quark.cn, open-cms-api.uc.cn, api.yangkeduo.com, api.bwton.com, szdmobile.suzhou.gov.cn, mcs-mimp-web.sf-express.com, ucmp.sf-express.com, ucmp-static.sf-express.com, api-sams.walmartmobile.cn, testflight.apple.com, api.cloud.189.cn, otheve.beacon.qq.com, api.xiachufang.com, xyst.yuanfudao.com, a.sinopecsales.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bcs.cmbchina.com, mbs.boc.cn, *.app.coc.10086.cn, app.10086.cn, cloud.189.cn, zt-app.go189.cn, appwk.baidu.com, api.sogaha.cn, ad.shunchangzhixing.com, e-static.aia.com.cn, amemv.com, musical.com, snssdk.com, tiktokv.com, dsp.toutiao.com, ocrifs.ejoy.sinopec.com, sh-gateway.shihuo.cn, static.shihuocdn.cn, bdsp-x.jd.com,image1.ccb.com
+hostname = list-app-m.i4.cn, p0.pipi.cn, flowplus.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com,home.mi.com, wallet.95516.com, hd.mina.mi.com, img.meituan.net, app.dewu.com, cdn.poizon.com, static.95508.com, gab.122.gov.cn,  api.bwton.com, szdmobile.suzhou.gov.cn, mcs-mimp-web.sf-express.com, ucmp.sf-express.com, ucmp-static.sf-express.com, api-sams.walmartmobile.cn, testflight.apple.com, api.cloud.189.cn, otheve.beacon.qq.com, api.xiachufang.com, xyst.yuanfudao.com, a.sinopecsales.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bcs.cmbchina.com, mbs.boc.cn, *.app.coc.10086.cn, app.10086.cn, cloud.189.cn, zt-app.go189.cn, appwk.baidu.com, api.sogaha.cn, ad.shunchangzhixing.com, e-static.aia.com.cn, amemv.com, musical.com, snssdk.com, tiktokv.com, dsp.toutiao.com, ocrifs.ejoy.sinopec.com, sh-gateway.shihuo.cn, static.shihuocdn.cn, bdsp-x.jd.com,image1.ccb.com
