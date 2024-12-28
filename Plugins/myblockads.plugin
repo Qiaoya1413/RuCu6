@@ -84,8 +84,6 @@
 ^https?://(ios|android)\.sogou\.com/[^/]+/sogou_input_[^/]+/[^/]+/index\.html reject
 # 屏蔽游戏中心
 ^https?:\/\/h5api\.sginput\.qq\.com\/v1\/gcenter\/ios\/homepage reject-dict
-# 搜狗输入法 //sec.sginput.qq.com
-^https:\/\/sec\.sginput\.qq\.com\/q url script-response-header https://github.com/Qiaoya1413/RuCu6/blob/main/Scripts/header.js
 
 # > 山姆会员商店
 ^https?:\/\/api-sams\.walmartmobile\.cn\/api\/v\d\/sams\/sams-user\/(window\/getGoUpPlus|screen_promotion\/get) - reject
