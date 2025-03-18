@@ -2,7 +2,7 @@
 #!desc = 
 #!author = RuCu6[https://github.com/RuCu6]
 #!icon = https://raw.githubusercontent.com/RuCu6/Loon/main/Icons/app/myblockads.png
-#!date = 2024-12-15
+#!date = 2025-3-18
 
 
 [Rewrite]
@@ -55,8 +55,6 @@
 
 # > 绿城生活
 ^https:\/\/apiv50-ios\.4001113900\.com:7000\/ad - reject-dict
-# > 交管12123
-^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ - reject-dict
 
 #今日水印相机
 ^http:\/\/api\.sogaha\.cn\/ssp\/ad\/get\?ip - reject-dict
@@ -67,8 +65,11 @@
 ^https:\/\/api\.bwton\.com\/bff\/app\/index\/recommend - reject-dict
 ^https:\/\/api\.bwton\.com\/bff\/app\/h5\/v1\/station\/goods - reject-dict
 ^http:\/\/ad\.shunchangzhixing\.com\/getAd - reject-dict
+
 # > 苏周到更新提示
 ^https:\/\/szdmobile\.suzhou\.gov\.cn\/thirdapp-center\/appUpdate\/update - reject-dict
+
+# > 顺丰
 # hostname = mcs-mimp-web.sf-express.com, ucmp.sf-express.com
 ^https?:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/integralPlanet\/getCxAdvertiseList - reject-dict
 ^https?:\/\/ucmp-static\.sf-express\.com\/proxy\/wxbase\/wxTicket\/wxLiveStreamInfo\?pageNo - reject-dict
@@ -112,8 +113,7 @@
 ^https?:\/\/mobile-pic\.cache\.iciba\.com\/feeds_ad\/ - reject-200
 
 # > 小爱音箱
-^https:\/\/hd\.mina\.mi\.com\/app_ad\/tab_alert\?requestId=app_ios - reject-dict
-^https:\/\/hd\.mina\.mi\.com\/splashscreen\/alert\?requestId=app_ios - reject-dict
+^https:\/\/info\.mina\.xiaoaisound\.com\/advertise - reject-dict
 
 # > 下厨房
 ^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ - reject
@@ -129,6 +129,7 @@
 # > 友邦
 ^https:\/\/e-static\.aia\.com\.cn\/kyh\/resourcefolder\/ads - reject-dict
 
+# > 招商银行
 # 开屏广告
 ^https?:\/\/mbasecc\.(bas|bcs)\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec - reject-dict
 # 设置栏目内广告
@@ -146,16 +147,6 @@
 ^https?:\/\/cloud\.189\.cn\/include\/splash\/ - reject-dict
 ^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation - reject-dict
 
-# > 字节跳动
-^https?:\/\/.+\.(amemv|musical|snssdk|tiktokv)\.com\/(api|motor)\/ad\/ - reject-200
-^https?:\/\/.+\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ - reject-200
-^https?:\/\/dsp\.toutiao\.com\/api\/xunfei\/ads\/ - reject-200
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/ad\/ - reject
-^https?:\/\/[\w-]+\.snssdk\.com\/.+_ad\/ - reject
-^https?:\/\/.+\.amemv\.com\/.+app_log - reject-img
-^https?:\/\/.+\.amemv\.com\/.+report - reject-img
-^https?:\/\/.+\.amemv\.com\/.+stats - reject-img
-
 
 [Script]
 # 美团开屏广告
@@ -169,4 +160,4 @@ http-response ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/exploreTab script-path=
 http-response ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/myTab script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Mi/MiAD.js, requires-body=true, timeout=60, tag=MiAD
 
 [MITM]
-hostname = sec.sginput.qq.com,apiv50-ios.4001113900.com,list-app-m.i4.cn, p0.pipi.cn, flowplus.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com,home.mi.com, wallet.95516.com, hd.mina.mi.com, img.meituan.net, app.dewu.com, cdn.poizon.com, static.95508.com, gab.122.gov.cn,  api.bwton.com, szdmobile.suzhou.gov.cn, mcs-mimp-web.sf-express.com, ucmp.sf-express.com, ucmp-static.sf-express.com, api-sams.walmartmobile.cn, testflight.apple.com, api.cloud.189.cn, otheve.beacon.qq.com, api.xiachufang.com, xyst.yuanfudao.com, a.sinopecsales.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bcs.cmbchina.com, mbs.boc.cn, *.app.coc.10086.cn, app.10086.cn, cloud.189.cn, zt-app.go189.cn, appwk.baidu.com, api.sogaha.cn, ad.shunchangzhixing.com, e-static.aia.com.cn, amemv.com, musical.com, snssdk.com, tiktokv.com, dsp.toutiao.com, ocrifs.ejoy.sinopec.com, sh-gateway.shihuo.cn, static.shihuocdn.cn, bdsp-x.jd.com,image1.ccb.com, ios.sogou.com, android.sogou.com, h5api.sginput.qq.com
+hostname = sec.sginput.qq.com,apiv50-ios.4001113900.com,list-app-m.i4.cn, p0.pipi.cn, flowplus.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com,home.mi.com, wallet.95516.com, img.meituan.net, app.dewu.com, cdn.poizon.com, static.95508.com, gab.122.gov.cn,  api.bwton.com, szdmobile.suzhou.gov.cn, mcs-mimp-web.sf-express.com, ucmp.sf-express.com, ucmp-static.sf-express.com, api-sams.walmartmobile.cn, testflight.apple.com, api.cloud.189.cn, otheve.beacon.qq.com, api.xiachufang.com, xyst.yuanfudao.com, a.sinopecsales.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bcs.cmbchina.com, mbs.boc.cn, *.app.coc.10086.cn, app.10086.cn, cloud.189.cn, zt-app.go189.cn, appwk.baidu.com, api.sogaha.cn, ad.shunchangzhixing.com, e-static.aia.com.cn, ocrifs.ejoy.sinopec.com, sh-gateway.shihuo.cn, static.shihuocdn.cn, bdsp-x.jd.com,image1.ccb.com, ios.sogou.com, android.sogou.com, h5api.sginput.qq.com
