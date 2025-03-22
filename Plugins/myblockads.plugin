@@ -1,9 +1,5 @@
 #!name = 去广告插件
-#!desc = 
-#!author = RuCu6[https://github.com/RuCu6]
-#!icon = https://raw.githubusercontent.com/RuCu6/Loon/main/Icons/app/myblockads.png
-#!date = 2025-3-18
-
+#!date = 2025-3-22
 
 [Rewrite]
 # 爱思助手 //list-app-m.i4.cn
@@ -48,6 +44,9 @@
 # 得物开屏广告
 ^https:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement - reject-dict
 ^https?:\/\/cdn\.poizon\.com\/node-common\/.*.jpg - reject-dict
+
+# 豆瓣开屏广告补充
+^https:\/\/api\.douban\.com\/v2\/app_ads\/splash_show reject-dict
 
 # 广发精彩开屏广告
 ^https?:\/\/static\.95508\.com\/mmg\/images\/ads\/.+\/(.+1125?.+2436|.+%.+%|.+_.+_) - reject-dict
@@ -114,6 +113,7 @@
 
 # > 小爱音箱
 ^https:\/\/info\.mina\.xiaoaisound\.com\/advertise - reject-dict
+^https:\/\/info\.mina\.xiaoaisound\.com\/payGuide\/userCenter reject-dict
 
 # > 下厨房
 ^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ - reject
