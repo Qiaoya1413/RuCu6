@@ -119,7 +119,7 @@
 ^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ - reject
 
 # > 猿辅导
-^https?:\/\/xyst\.yuanfudao\.com\/iphone\/splashesVd - reject-200
+
 
 # > 易捷加油 开屏广告
 ^https:\/\/a\.sinopecsales\.com\/app\/cms - reject-dict
@@ -160,4 +160,4 @@ http-response ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/exploreTab script-path=
 http-response ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/myTab script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Mi/MiAD.js, requires-body=true, timeout=60, tag=MiAD
 
 [MITM]
-hostname = info.mina.xiaoaisound.com,sec.sginput.qq.com,apiv50-ios.4001113900.com,list-app-m.i4.cn, p0.pipi.cn, flowplus.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com,home.mi.com, wallet.95516.com, img.meituan.net, app.dewu.com, cdn.poizon.com, static.95508.com, gab.122.gov.cn,  api.bwton.com, szdmobile.suzhou.gov.cn, mcs-mimp-web.sf-express.com, ucmp.sf-express.com, ucmp-static.sf-express.com, api-sams.walmartmobile.cn, testflight.apple.com, api.cloud.189.cn, otheve.beacon.qq.com, api.xiachufang.com, xyst.yuanfudao.com, a.sinopecsales.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bcs.cmbchina.com, mbs.boc.cn, *.app.coc.10086.cn, app.10086.cn, cloud.189.cn, zt-app.go189.cn, appwk.baidu.com, api.sogaha.cn, ad.shunchangzhixing.com, e-static.aia.com.cn, ocrifs.ejoy.sinopec.com, sh-gateway.shihuo.cn, static.shihuocdn.cn, bdsp-x.jd.com,image1.ccb.com, ios.sogou.com, android.sogou.com, h5api.sginput.qq.com
+hostname = info.mina.xiaoaisound.com,sec.sginput.qq.com,apiv50-ios.4001113900.com,list-app-m.i4.cn, p0.pipi.cn, flowplus.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com,home.mi.com, wallet.95516.com, img.meituan.net, app.dewu.com, cdn.poizon.com, static.95508.com, gab.122.gov.cn,  api.bwton.com, szdmobile.suzhou.gov.cn, mcs-mimp-web.sf-express.com, ucmp.sf-express.com, ucmp-static.sf-express.com, api-sams.walmartmobile.cn, testflight.apple.com, api.cloud.189.cn, otheve.beacon.qq.com, api.xiachufang.com, a.sinopecsales.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bcs.cmbchina.com, mbs.boc.cn, *.app.coc.10086.cn, app.10086.cn, cloud.189.cn, zt-app.go189.cn, appwk.baidu.com, api.sogaha.cn, ad.shunchangzhixing.com, e-static.aia.com.cn, ocrifs.ejoy.sinopec.com, sh-gateway.shihuo.cn, static.shihuocdn.cn, bdsp-x.jd.com,image1.ccb.com, ios.sogou.com, android.sogou.com, h5api.sginput.qq.com
