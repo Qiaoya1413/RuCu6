@@ -119,7 +119,7 @@
 ^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ - reject
 
 # > 猿辅导
-^https?:\/\/xyst\.yuanfudao\.com\/iphone\/splashesV\d - reject-dict
+^https?:\/\/xyst\.yuanfudao\.com\/iphone\/splashesVd - reject-200
 
 # > 易捷加油 开屏广告
 ^https:\/\/a\.sinopecsales\.com\/app\/cms - reject-dict
