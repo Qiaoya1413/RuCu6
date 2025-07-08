@@ -1,5 +1,5 @@
 #!name = 去广告插件
-#!date = 2025-3-22
+#!date = 2025-7-7
 
 [Rewrite]
 # 爱思助手 //list-app-m.i4.cn
@@ -35,9 +35,6 @@
 ^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 reject
 
 #自建部分
-# > 淘宝
-^https:\/\/(gw|heic)\.alicdn\.com\/imgextra\/i\d\/\d*\/?[\w!]+-\d-(octopus|tps-1125-1602)\.(jp|pn)g_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q[59]0 - reject-dict
-
 # > 百度文库
 ^https?:\/\/appwk\.baidu\.com\/xpage\/interface\/wknaad - reject-dict
 
@@ -57,6 +54,9 @@
 
 #今日水印相机
 ^http:\/\/api\.sogaha\.cn\/ssp\/ad\/get\?ip - reject-dict
+
+#jd补充
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs
 
 # > 苏e行
 ^https?:\/\/api\.bwton\.com\/bas\/ad - reject-dict
@@ -111,15 +111,11 @@
 ^https?:\/\/ios\.wps\.cn\/ad-statistics-service - reject
 ^https?:\/\/mobile-pic\.cache\.iciba\.com\/feeds_ad\/ - reject-200
 
-# > 小爱音箱
-^https:\/\/info\.mina\.xiaoaisound\.com\/advertise - reject-dict
-^https:\/\/info\.mina\.xiaoaisound\.com\/payGuide\/userCenter reject-dict
-
 # > 下厨房
 ^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ - reject
 
-# > 猿辅导
-
+# > 小猿搜题
+^https:\/\/xyst\.yuanfudao\.com\/iphone\/splashesV2\/4
 
 # > 易捷加油 开屏广告
 ^https:\/\/a\.sinopecsales\.com\/app\/cms - reject-dict
@@ -160,4 +156,4 @@ http-response ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/exploreTab script-path=
 http-response ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/myTab script-path=https://raw.githubusercontent.com/linuszlx/JS/main/Mi/MiAD.js, requires-body=true, timeout=60, tag=MiAD
 
 [MITM]
-hostname = info.mina.xiaoaisound.com,sec.sginput.qq.com,apiv50-ios.4001113900.com,list-app-m.i4.cn, p0.pipi.cn, flowplus.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com,home.mi.com, wallet.95516.com, img.meituan.net, app.dewu.com, cdn.poizon.com, static.95508.com, gab.122.gov.cn,  api.bwton.com, szdmobile.suzhou.gov.cn, mcs-mimp-web.sf-express.com, ucmp.sf-express.com, ucmp-static.sf-express.com, api-sams.walmartmobile.cn, testflight.apple.com, api.cloud.189.cn, otheve.beacon.qq.com, api.xiachufang.com, a.sinopecsales.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bcs.cmbchina.com, mbs.boc.cn, *.app.coc.10086.cn, app.10086.cn, cloud.189.cn, zt-app.go189.cn, appwk.baidu.com, api.sogaha.cn, ad.shunchangzhixing.com, e-static.aia.com.cn, ocrifs.ejoy.sinopec.com, sh-gateway.shihuo.cn, static.shihuocdn.cn, bdsp-x.jd.com,image1.ccb.com, ios.sogou.com, android.sogou.com, h5api.sginput.qq.com
+hostname = m.360buyimg.com,xyst.yuanfudao.com,sec.sginput.qq.com,apiv50-ios.4001113900.com,list-app-m.i4.cn, p0.pipi.cn, flowplus.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com,home.mi.com, wallet.95516.com, img.meituan.net, app.dewu.com, cdn.poizon.com, static.95508.com, gab.122.gov.cn,  api.bwton.com, szdmobile.suzhou.gov.cn, mcs-mimp-web.sf-express.com, ucmp.sf-express.com, ucmp-static.sf-express.com, api-sams.walmartmobile.cn, testflight.apple.com, api.cloud.189.cn, otheve.beacon.qq.com, api.xiachufang.com, a.sinopecsales.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bcs.cmbchina.com, mbs.boc.cn, *.app.coc.10086.cn, app.10086.cn, cloud.189.cn, zt-app.go189.cn, appwk.baidu.com, api.sogaha.cn, ad.shunchangzhixing.com, e-static.aia.com.cn, ocrifs.ejoy.sinopec.com, sh-gateway.shihuo.cn, static.shihuocdn.cn, bdsp-x.jd.com,image1.ccb.com, ios.sogou.com, android.sogou.com, h5api.sginput.qq.com
