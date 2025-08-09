@@ -99,6 +99,12 @@
 
 # > 天翼云盘
 ^https?:\/\/api\.cloud\.189\.cn\/guns\/(img\/recommendedPosition|getOpenscreenBanners) - reject-dict
+^https:\/\/api\.cloud\.189\.cn\/guns\/getCarouselAds\.action - reject-dict
+^https:\/\/api\.cloud\.189\.cn\/guns\/getPageBanners\.action - reject-dict
+^https:\/\/api\.cloud\.189\.cn\/sealeverScene - reject-dict
+^https:\/\/api\.cloud\.189\.cn\/listRecords\.action\?rand - reject-dict
+^https:\/\/content\.21cn\.com\/api\/content\/v2 - reject-dict
+^https:\/\/api\.cloud\.189\.cn\/bff - reject-dict
 
 # > 腾讯手机管家
 ^https:\/\/otheve.beacon.qq.com\/analytics\/upload\?sid=.* - reject-dict
@@ -149,4 +155,4 @@ http-response ^https?:\/\/img\.meituan\.net\/dpmobile\/ script-path=https://raw.
 #http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js, requires-body=true, timeout=60, tag=TF_Download
 
 [MITM]
-hostname = m.360buyimg.com,xyst.yuanfudao.com,sec.sginput.qq.com,apiv50-ios.4001113900.com,list-app-m.i4.cn, p0.pipi.cn, flowplus.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com, wallet.95516.com, img.meituan.net, app.dewu.com, cdn.poizon.com, static.95508.com, gab.122.gov.cn,  api.bwton.com, szdmobile.suzhou.gov.cn, mcs-mimp-web.sf-express.com, ucmp.sf-express.com, ucmp-static.sf-express.com, api-sams.walmartmobile.cn, api.cloud.189.cn, otheve.beacon.qq.com, api.xiachufang.com, a.sinopecsales.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bcs.cmbchina.com, mbs.boc.cn, *.app.coc.10086.cn, app.10086.cn, cloud.189.cn, zt-app.go189.cn, appwk.baidu.com, api.sogaha.cn, ad.shunchangzhixing.com, e-static.aia.com.cn, ocrifs.ejoy.sinopec.com, sh-gateway.shihuo.cn, static.shihuocdn.cn, bdsp-x.jd.com,image1.ccb.com, ios.sogou.com, android.sogou.com, h5api.sginput.qq.com
+hostname = content.21cn.com, m.360buyimg.com,xyst.yuanfudao.com,sec.sginput.qq.com,apiv50-ios.4001113900.com,list-app-m.i4.cn, p0.pipi.cn, flowplus.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com, wallet.95516.com, img.meituan.net, app.dewu.com, cdn.poizon.com, static.95508.com, gab.122.gov.cn,  api.bwton.com, szdmobile.suzhou.gov.cn, mcs-mimp-web.sf-express.com, ucmp.sf-express.com, ucmp-static.sf-express.com, api-sams.walmartmobile.cn, api.cloud.189.cn, otheve.beacon.qq.com, api.xiachufang.com, a.sinopecsales.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bcs.cmbchina.com, mbs.boc.cn, *.app.coc.10086.cn, app.10086.cn, cloud.189.cn, zt-app.go189.cn, appwk.baidu.com, api.sogaha.cn, ad.shunchangzhixing.com, e-static.aia.com.cn, ocrifs.ejoy.sinopec.com, sh-gateway.shihuo.cn, static.shihuocdn.cn, bdsp-x.jd.com,image1.ccb.com, ios.sogou.com, android.sogou.com, h5api.sginput.qq.com
