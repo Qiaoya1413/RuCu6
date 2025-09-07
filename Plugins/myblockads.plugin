@@ -1,5 +1,6 @@
 #!name = 去广告插件
-#!date = 2025-7-31
+#!desc = 开屏广告净化插件
+#!date = 2025-9-7
 
 [Rewrite]
 # 爱思助手 //list-app-m.i4.cn
@@ -14,13 +15,6 @@
 # 猫眼 //p0.pipi.cn
 ^https:\/\/p0\.pipi\.cn\/(?:adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.jpg\?imageMogr2\/quality\/ reject-dict
 ^https:\/\/p0\.pipi\.cn\/(?:adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.(?:jpg|png)\?imageMogr2\/thumbnail\/(?:860x0|!165x165|!1049x1169) reject-dict
-
-# 美团 & 美团外卖 //flowplus.meituan.net, img.meituan.net, s3plus.meituan.net
-^http:\/\/wmapi\.meituan\.com\/api\/v7\/(?:loadInfo|openscreen|startpicture) reject-dict
-^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg reject-dict
-^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg reject-dict
-^https:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_\d+\.json reject-dict
-^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(?:brandcpt-vedio|waimai-alita)\/\w+\.zip$ reject-dict
 
 # 网上国网 //osg-service.sgcc.com.cn
 ^https:\/\/osg-service\.sgcc\.com\.cn:18600\/emss-pfa-appset-front\/bootpageoutter\/ reject-dict
@@ -62,18 +56,6 @@
 ^https:\/\/api\.bwton\.com\/bff\/app\/h5\/v1\/station\/goods - reject-dict
 ^http:\/\/ad\.shunchangzhixing\.com\/getAd - reject-dict
 
-# > 苏周到更新提示
-^https:\/\/szdmobile\.suzhou\.gov\.cn\/thirdapp-center\/appUpdate\/update - reject-dict
-
-# > 顺丰
-# hostname = mcs-mimp-web.sf-express.com, ucmp.sf-express.com
-^https?:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/integralPlanet\/getCxAdvertiseList - reject-dict
-^https?:\/\/ucmp-static\.sf-express\.com\/proxy\/wxbase\/wxTicket\/wxLiveStreamInfo\?pageNo - reject-dict
-^https?:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberGoods\/pointMallService\/goodsList - reject-dict
-^https?:\/\/ucmp\.sf-express\.com\/proxy\/operation-platform\/info-flow-adver\/query - reject-dict
-^https?:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberManage\/memberEquity\/queryRecommendEquity - reject-dict
-^https?:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberActLengthy\/fullGiveActivityService\/fullGiveInfo - reject-dict
-
 # > 搜狗输入法
 # hostname = business-cdn.shouji.sogou.com, ios.sogou.com, android.sogou.com, h5api.sginput.qq.com
 #^https?:\/\/business-cdn\.shouji\.sogou\.com\/wapdl\/hole\/.+?\.jpg reject-200
@@ -81,16 +63,6 @@
 ^https?://(ios|android)\.sogou\.com/[^/]+/sogou_input_[^/]+/[^/]+/index\.html reject
 # 屏蔽游戏中心
 ^https?:\/\/h5api\.sginput\.qq\.com\/v1\/gcenter\/ios\/homepage reject-dict
-
-# > 山姆会员商店
-^https?:\/\/api-sams\.walmartmobile\.cn\/api\/v\d\/sams\/sams-user\/(window\/getGoUpPlus|screen_promotion\/get) - reject
-^https?:\/\/api-sams\.walmartmobile\.cn\/api\/v\d\/sams\/channel\/portal\/AdgroupData - reject-dict
-^https?:\/\/api-sams\.walmartmobile\.cn\/api\/v\d\/sams\/configuration\/personCenterEntrance\/query - reject-dict
-^https?:\/\/api-sams\.walmartmobile\.cn\/api\/v\d\/sams\/trade\/order\/getOftenBuyGoods - reject-dict
-^https?:\/\/api-sams\.walmartmobile\.cn\/api\/v\d\/sams\/goods-portal\/spu\/searchRecommendPool - reject-dict
-^https?:\/\/api-sams\.walmartmobile\.cn\/api\/v\d\/sams\/configuration\/appVersionUpdate\/getAppVersionUpdateInfo - reject-dict
-# 屏蔽更新
-^https?:\/\/api-sams\.walmartmobile\.cn\/api\/v1\/sams\/configuration\/portal\/beUpdate - reject-dict
 
 # 识货开屏广告
 ^https?:\/\/sh-gateway\.shihuo\.cn\/v\d\/services\/sh-adapi\/home\/(screen|ad) - reject
@@ -105,14 +77,6 @@
 ^https:\/\/api\.cloud\.189\.cn\/listRecords\.action\?rand - reject-dict
 ^https:\/\/content\.21cn\.com\/api\/content\/v2 - reject-dict
 ^https:\/\/api\.cloud\.189\.cn\/bff - reject-dict
-
-# > 腾讯手机管家
-^https:\/\/otheve.beacon.qq.com\/analytics\/upload\?sid=.* - reject-dict
-# > UC Brower
-^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject-200
-# hostname = ios.wps.cn, mobile-pic.cache.iciba.com
-^https?:\/\/ios\.wps\.cn\/ad-statistics-service - reject
-^https?:\/\/mobile-pic\.cache\.iciba\.com\/feeds_ad\/ - reject-200
 
 # > 下厨房
 ^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ - reject
@@ -146,13 +110,12 @@
 ^https?:\/\/cloud\.189\.cn\/include\/splash\/ - reject-dict
 ^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation - reject-dict
 
+# > sukebei.nyaa.si网站
+^https:\/\/cdn\.tsyndicate\.com\/sdk\/v1 - reject-200
 
 [Script]
-# 美团开屏广告
-http-response ^https?:\/\/img\.meituan\.net\/dpmobile\/ script-path=https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/dianping.js, requires-body=true, timeout=60, tag=dianping
-
 # > TestFlight
 #http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js, requires-body=true, timeout=60, tag=TF_Download
 
 [MITM]
-hostname = content.21cn.com, m.360buyimg.com,xyst.yuanfudao.com,sec.sginput.qq.com,apiv50-ios.4001113900.com,list-app-m.i4.cn, p0.pipi.cn, flowplus.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com, wallet.95516.com, img.meituan.net, app.dewu.com, cdn.poizon.com, static.95508.com, gab.122.gov.cn,  api.bwton.com, szdmobile.suzhou.gov.cn, mcs-mimp-web.sf-express.com, ucmp.sf-express.com, ucmp-static.sf-express.com, api-sams.walmartmobile.cn, api.cloud.189.cn, otheve.beacon.qq.com, api.xiachufang.com, a.sinopecsales.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bcs.cmbchina.com, mbs.boc.cn, *.app.coc.10086.cn, app.10086.cn, cloud.189.cn, zt-app.go189.cn, appwk.baidu.com, api.sogaha.cn, ad.shunchangzhixing.com, e-static.aia.com.cn, ocrifs.ejoy.sinopec.com, sh-gateway.shihuo.cn, static.shihuocdn.cn, bdsp-x.jd.com,image1.ccb.com, ios.sogou.com, android.sogou.com, h5api.sginput.qq.com
+hostname = cdn.tsyndicate.com, content.21cn.com, m.360buyimg.com,xyst.yuanfudao.com,sec.sginput.qq.com,apiv50-ios.4001113900.com,list-app-m.i4.cn, p0.pipi.cn, osg-service.sgcc.com.cn, mp.weixin.qq.com, wallet.95516.com, app.dewu.com, cdn.poizon.com, static.95508.com, gab.122.gov.cn,  api.bwton.com, api.cloud.189.cn, api.xiachufang.com, a.sinopecsales.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bcs.cmbchina.com, mbs.boc.cn, *.app.coc.10086.cn, app.10086.cn, cloud.189.cn, zt-app.go189.cn, appwk.baidu.com, api.sogaha.cn, ad.shunchangzhixing.com, e-static.aia.com.cn, ocrifs.ejoy.sinopec.com, sh-gateway.shihuo.cn, static.shihuocdn.cn, image1.ccb.com, ios.sogou.com, android.sogou.com, h5api.sginput.qq.com
