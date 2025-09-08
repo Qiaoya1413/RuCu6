@@ -54,7 +54,7 @@
 ^http:\/\/api\.sogaha\.cn\/ssp\/ad\/get\?ip - reject-dict
 
 #jd补充
-^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs - reject-dict
 
 # > 苏e行
 ^https?:\/\/api\.bwton\.com\/bas\/ad - reject-dict
@@ -89,7 +89,7 @@
 ^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ - reject
 
 # > 小猿搜题
-^https:\/\/xyst\.yuanfudao\.com\/iphone\/splashesV2\/4
+^https:\/\/xyst\.yuanfudao\.com\/iphone\/splashesV2\/ - reject-dict
 
 # > 易捷加油 开屏广告
 ^https:\/\/a\.sinopecsales\.com\/app\/cms - reject-dict
