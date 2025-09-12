@@ -3,125 +3,135 @@
 #!date = 2025-9-7
 
 [Rewrite]
-# 爱思助手 //list-app-m.i4.cn
+#爱思助手 //list-app-m.i4.cn
 ^https:\/\/list-app-m\.i4\.cn\/(?:adclickcb|getHotSearchList|getopfstadinfo)\.xhtml reject
 
-# 建设银行
+#建设银行
 ^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/(?:nf\/newfin\/activity|po\/poortheme\/activity)\/\w+\.png reject
 
-# 交管12123 //gab.122.gov.cn
+#交管12123 //gab.122.gov.cn
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver reject-dict
 
-# 猫眼 //p0.pipi.cn
+#猫眼 //p0.pipi.cn
 ^https:\/\/p0\.pipi\.cn\/(?:adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.jpg\?imageMogr2\/quality\/ reject-dict
 ^https:\/\/p0\.pipi\.cn\/(?:adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.(?:jpg|png)\?imageMogr2\/thumbnail\/(?:860x0|!165x165|!1049x1169) reject-dict
 
-# 美团 & 美团外卖 &书旗小说开屏//flowplus.meituan.net, img.meituan.net, s3plus.meituan.net
+#美团 & 美团外卖 //flowplus.meituan.net, img.meituan.net, s3plus.meituan.net
 ^http:\/\/wmapi\.meituan\.com\/api\/v7\/(?:loadInfo|openscreen|startpicture) reject-dict
 ^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg reject-dict
 ^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg reject-dict
 ^https:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_\d+\.json reject-dict
 ^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(?:brandcpt-vedio|waimai-alita)\/\w+\.zip$ reject-dict
 
-# 网上国网 //osg-service.sgcc.com.cn
+#网上国网 //osg-service.sgcc.com.cn
 ^https:\/\/osg-service\.sgcc\.com\.cn:18600\/emss-pfa-appset-front\/bootpageoutter\/ reject-dict
 
-# 微信 //mp.weixin.qq.com
+#微信 //mp.weixin.qq.com
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(?:cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle) reject-dict
 
-# 云闪付 //wallet.95516.com
+#云闪付 //wallet.95516.com
 ^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 reject
 
-#自建部分
-# > 百度文库
-^https?:\/\/appwk\.baidu\.com\/xpage\/interface\/wknaad - reject-dict
+#>百度文库
+^https?:\/\/appwk\.baidu\.com\/xpage\/interface\/wknaad reject-dict
 
-# 得物开屏广告
-^https:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement - reject-dict
-^https?:\/\/cdn\.poizon\.com\/node-common\/.*.jpg - reject-dict
+#得物开屏广告
+^https:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement reject-dict
+^https?:\/\/cdn\.poizon\.com\/node-common\/.*.jpg reject-dict
 
-# 豆瓣开屏广告补充
+#豆瓣开屏广告补充
 ^https:\/\/api\.douban\.com\/v2\/app_ads\/splash_show reject-dict
 
-# 广发精彩开屏广告
-^https?:\/\/static\.95508\.com\/mmg\/images\/ads\/.+\/(.+1125?.+2436|.+%.+%|.+_.+_) - reject-dict
-^https?:\/\/static\.95508\.com\/mmg\/ciop\/sysabbr\/cmep\/images\/apppopupads - reject-dict
+#广发精彩开屏广告
+^https?:\/\/static\.95508\.com\/mmg\/images\/ads\/.+\/(.+1125?.+2436|.+%.+%|.+_.+_) reject-dict
+^https?:\/\/static\.95508\.com\/mmg\/ciop\/sysabbr\/cmep\/images\/apppopupads reject-dict
 
-# > 绿城生活
-^https:\/\/apiv50-ios\.4001113900\.com:7000\/ad - reject-dict
+#>绿城生活
+^https:\/\/apiv50-ios\.4001113900\.com:7000\/ad reject-dict
 
 #今日水印相机
-^http:\/\/api\.sogaha\.cn\/ssp\/ad\/get\?ip - reject-dict
+^http:\/\/api\.sogaha\.cn\/ssp\/ad\/get\?ip reject-dict
 
 #jd补充
-^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs - reject-dict
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs reject-dict
 
-# > 苏e行
-^https?:\/\/api\.bwton\.com\/bas\/ad - reject-dict
-^https:\/\/api\.bwton\.com\/bff\/app\/index\/goods - reject-dict
-^https:\/\/api\.bwton\.com\/bff\/app\/index\/recommend - reject-dict
-^https:\/\/api\.bwton\.com\/bff\/app\/h5\/v1\/station\/goods - reject-dict
-^http:\/\/ad\.shunchangzhixing\.com\/getAd - reject-dict
+#>苏e行
+^https?:\/\/api\.bwton\.com\/bas\/ad reject-dict
+^https:\/\/api\.bwton\.com\/bff\/app\/index\/goods reject-dict
+^https:\/\/api\.bwton\.com\/bff\/app\/index\/recommend reject-dict
+^https:\/\/api\.bwton\.com\/bff\/app\/h5\/v1\/station\/goods reject-dict
+^http:\/\/ad\.shunchangzhixing\.com\/getAd reject-dict
 
-# > 搜狗输入法
-# hostname = business-cdn.shouji.sogou.com, ios.sogou.com, android.sogou.com, h5api.sginput.qq.com
+#>搜狗输入法
+#hostname = business-cdn.shouji.sogou.com, ios.sogou.com, android.sogou.com, h5api.sginput.qq.com
 #^https?:\/\/business-cdn\.shouji\.sogou\.com\/wapdl\/hole\/.+?\.jpg reject-200
-# 开屏广告
+#开屏广告
 ^https?://(ios|android)\.sogou\.com/[^/]+/sogou_input_[^/]+/[^/]+/index\.html reject
-# 屏蔽游戏中心
+#屏蔽游戏中心
 ^https?:\/\/h5api\.sginput\.qq\.com\/v1\/gcenter\/ios\/homepage reject-dict
 
-# 识货开屏广告
+#识货开屏广告
 ^https?:\/\/sh-gateway\.shihuo\.cn\/v\d\/services\/sh-adapi\/home\/(screen|ad) - reject
-^https?:\/\/static\.shihuocdn\.cn\/admin\/imgs/202[0-9]{5}\/[a-z0-9]{32}_513x777\.png - reject-200
-^https?:\/\/static\.shihuocdn\.cn\/admin\/imgs/202[0-9]{5}\/[a-z0-9]{32}_750x1624\.png - reject-200
+^https?:\/\/static\.shihuocdn\.cn\/admin\/imgs/202[0-9]{5}\/[a-z0-9]{32}_513x777\.png reject-200
+^https?:\/\/static\.shihuocdn\.cn\/admin\/imgs/202[0-9]{5}\/[a-z0-9]{32}_750x1624\.png reject-200
 
-# > 天翼云盘
-^https?:\/\/api\.cloud\.189\.cn\/guns\/(img\/recommendedPosition|getOpenscreenBanners) - reject-dict
-^https:\/\/api\.cloud\.189\.cn\/guns\/getCarouselAds\.action - reject-dict
-^https:\/\/api\.cloud\.189\.cn\/guns\/getPageBanners\.action - reject-dict
-^https:\/\/api\.cloud\.189\.cn\/sealeverScene - reject-dict
-^https:\/\/api\.cloud\.189\.cn\/listRecords\.action\?rand - reject-dict
-^https:\/\/content\.21cn\.com\/api\/content\/v2 - reject-dict
-^https:\/\/api\.cloud\.189\.cn\/bff - reject-dict
+#>天翼云盘
+^https?:\/\/api\.cloud\.189\.cn\/guns\/(img\/recommendedPosition|getOpenscreenBanners) reject-dict
+^https:\/\/api\.cloud\.189\.cn\/guns\/getCarouselAds\.action reject-dict
+^https:\/\/api\.cloud\.189\.cn\/guns\/getPageBanners\.action reject-dict
+^https:\/\/api\.cloud\.189\.cn\/sealeverScene reject-dict
+^https:\/\/api\.cloud\.189\.cn\/listRecords\.action\?rand reject-dict
+^https:\/\/content\.21cn\.com\/api\/content\/v2 reject-dict
+^https:\/\/api\.cloud\.189\.cn\/bff reject-dict
 
-# > 下厨房
+#>下厨房
 ^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ - reject
 
-# > 小猿搜题
-^https:\/\/xyst\.yuanfudao\.com\/iphone\/splashesV2\/ - reject-dict
+#>小猿搜题
+^https:\/\/xyst\.yuanfudao\.com\/iphone\/splashesV2\/ reject-dict
 
-# > 易捷加油 开屏广告
-^https:\/\/a\.sinopecsales\.com\/app\/cms - reject-dict
-# 底部横幅广告
-^https?:\/\/ocrifs\.ejoy\.sinopec\.com\/advertitfs\/advert\/findAdvertInfo - reject-dict
+#>易捷加油 开屏广告
+^https:\/\/a\.sinopecsales\.com\/app\/cms reject-dict
+#底部横幅广告
+^https?:\/\/ocrifs\.ejoy\.sinopec\.com\/advertitfs\/advert\/findAdvertInfo reject-dict
 
-# > 友邦
-^https:\/\/e-static\.aia\.com\.cn\/kyh\/resourcefolder\/ads - reject-dict
+#>友邦
+^https:\/\/e-static\.aia\.com\.cn\/kyh\/resourcefolder\/ads reject-dict
 
-# > 招商银行
-# 开屏广告
-^https?:\/\/mbasecc\.(bas|bcs)\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec - reject-dict
-# 设置栏目内广告
+#>招商银行
+#开屏广告
+^https?:\/\/mbasecc\.(bas|bcs)\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec reject-dict
+#设置栏目内广告
 ^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec - reject
-# 首页随机弹窗
-^https?:\/\/intellicc\.bcs\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.adrender\.api\.AdWork\/getAdsBySlotId - reject-dict
+#首页随机弹窗
+^https?:\/\/intellicc\.bcs\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.adrender\.api\.AdWork\/getAdsBySlotId reject-dict
 
-# > 中国银行
-^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg - reject-dict
+#>中国银行
+^https:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg reject-dict
 
-# > 中国移动多个悬浮窗
-^https:\/\/(client\.app\.coc|h\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket - reject-dict
+#>中国移动多个悬浮窗
+^https:\/\/(client\.app\.coc|h\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket reject-dict
 
-# > 中国电信
-^https?:\/\/cloud\.189\.cn\/include\/splash\/ - reject-dict
-^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation - reject-dict
+#>中国电信
+^https?:\/\/cloud\.189\.cn\/include\/splash\/ reject-dict
+^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation reject-dict
 
-# > sukebei.nyaa.si网站
-^https:\/\/cdn\.tsyndicate\.com\/sdk\/v1 - reject-200
+#>中国联通
+#移除主页几个小按钮
+^https:\/\/m\.client\.10010\.com\/clientIndex\/v1\/api\/navHome response-body-json-jq '.datas.homeTopMenuItems |= map(select(.menuName != "通通" and .menuName != "签到"))'
+
+#移除主页浮窗和底部推广
+^https:\/\/m\.client\.10010\.com\/clientIndex\/homefusion\/fuInter response-body-json-jq 'del(.["HomeFusion.fuchuangAdv_A8"], .["HomeFusion.bottomLabel"])'
+
+#移除搜索框推广
+^https:\/\/m\.client\.10010\.com\/search_service\/tyfbSearch\/searchDiscoverListExpress response-body-json-jq '.data = []'
+^https:\/\/m\.client\.10010\.com\/search_service\/search\/searchScrollWord response-body-json-jq '.["113000004"] = []'
+
+#>sukebei.nyaa.si网站
+^https:\/\/cdn\.tsyndicate\.com\/sdk\/v1 reject-200
 
 [Script]
-# > TestFlight
+#>TestFlight
 #http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js, requires-body=true, timeout=60, tag=TF_Download
 
 [MITM]
